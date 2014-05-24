@@ -1,0 +1,148 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:terms="http://purl.org/dc/terms/"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="http://purl.org/net/bel-epa/ccy#">
+        <terms:created>2014-05-22</terms:created>
+        <rdfs:comment xml:lang="en">Ontology for a cryptocurrency.</rdfs:comment>
+        <rdfs:label>Ontology for a cryptocurrency.</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+        <foaf:maker rdf:resource="http://bel-epa.com/gjh#gjh"/>
+    </owl:Ontology>
+
+    <owl:Class rdf:about="http://purl.org/net/bel-epa/ccy#BlockHeader">
+        <rdfs:comment xml:lang="en">A Block Header for a crypto currency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">BlockHeader</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/net/bel-epa/ccy#ElectronicCoin">
+        <rdfs:comment xml:lang="en">We define an Electronic coin as a chain of digital signatures.  As per Satoshi's paper.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">ElectronicCoin</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/net/bel-epa/ccy#MerkleRoot">
+        <rdfs:comment xml:lang="en">The root of a merkle tree, of items</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">MerkleRoot</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/net/bel-epa/ccy#TransactionInput">
+        <rdfs:comment xml:lang="en">A Block Transaction Input for a crypto currency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">TransactionInput</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/net/bel-epa/ccy#TransactionOutput">
+        <rdfs:comment xml:lang="en">A Block Transaction Output for a crypto currency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">TransactionOutput</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#coinURI">
+        <rdfs:comment xml:lang="en">This represents a coin address which should be a coin URI e.g. bitcoin: </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">coinURI</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#blockHeaderHash">
+        <rdfs:comment xml:lang="en">A hash of a block (traditionally sha256)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">blockHeaderHash</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#hasInput">
+        <rdfs:comment xml:lang="en">A block transaction has an input.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">hasInput</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#hasOutput">
+        <rdfs:comment xml:lang="en">A block transaction has an ouput.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">hasOutput</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#hasTransaction">
+        <rdfs:comment xml:lang="en">The block chain has a transaction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">hasTransaction</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#height">
+        <rdfs:comment xml:lang="en">The height according to the longest chain.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">height</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#index">
+        <rdfs:comment xml:lang="en">The index number of an input or output, sometimes referred to as vout or n</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">index</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#latestBlockHeader">
+        <rdfs:comment xml:lang="en">The latest block header for an electronic coin.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">latestBlockHeader</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#lockTime">
+        <rdfs:comment xml:lang="en">This is the lock time.  For bitcoin if non-zero and sequence numbers are &lt; 0xFFFFFFFF: block height or timestamp when transaction is final</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">lockTime</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#nbits">
+        <rdfs:comment xml:lang="en">This is the term used in the reference client.  It is the target, but in a compact and custom 4-byte encoding.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">nbits</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#previousBlockHeader">
+        <rdfs:comment xml:lang="en">The previous block header</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">previousBlockHeader</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#protocol">
+        <rdfs:comment xml:lang="en">The protocol used by electronic coins.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">protocol</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#scriptSig">
+        <rdfs:comment xml:lang="en">The input scriptSig</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">scriptSig</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#sequence">
+        <rdfs:comment xml:lang="en">Transaction sequence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">sequence</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#testnet3">
+        <rdfs:comment xml:lang="en">This represents a coin testnet3 address which should be a coin URI, e.g. bitcoin:</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">testnet3</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#timestamp">
+        <rdfs:comment xml:lang="en">A unix timestamp for crypto blocks</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">timestamp</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/bel-epa/ccy#transactionMerkleRoot">
+        <rdfs:comment xml:lang="en">The hash of the merkle tree of transactions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="/ccy#"/>
+        <rdfs:label xml:lang="en">transactionMerkleRoot</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+</rdf:RDF>
