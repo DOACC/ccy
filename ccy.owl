@@ -7,10 +7,10 @@
  xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="http://purl.org/net/bel-epa/ccy#">
         <terms:created>2014-05-22</terms:created>
-        <rdfs:comment xml:lang="en">Ontology for a cryptocurrency.</rdfs:comment>
-        <rdfs:label>Ontology for a cryptocurrency.</rdfs:label>
+        <rdfs:comment xml:lang="en">An adaptation of Melvin Carvalho’s ontology for a cryptocurrency.</rdfs:comment>
+        <rdfs:label>An adaptation of Melvin Carvalho’s ontology for a cryptocurrency.</rdfs:label>
         <ns:term_status>unstable</ns:term_status>
-        <foaf:maker rdf:resource="http://bel-epa.com/gjh#gjh"/>
+        <foaf:maker rdf:resource="http://melvincarvalho.com/#me"/>
     </owl:Ontology>
 
     <owl:Class rdf:about="http://purl.org/net/bel-epa/ccy#BlockHeader">
