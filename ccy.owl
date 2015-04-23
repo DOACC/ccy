@@ -511,7 +511,7 @@
         <rdfs:label xml:lang="en">vout</rdfs:label>
         <skos:prefLabel xml:lang="en">vout</skos:prefLabel>
         <ns:term_status>unstable</ns:term_status>
-    </owl:OjectProperty>
+    </owl:ObjectProperty>
 
     <owl:DatatypeProperty rdf:about="&ccy;nvout">
         <rdfs:comment xml:lang="en">The output index number (vout) of the outpoint being spent. The first output in a transaction has an index of 0. Not present if this is a coinbase transaction</rdfs:comment>
@@ -574,13 +574,7 @@
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&ccy;type">
-        <rdfs:comment xml:lang="en">The type of script. This will be one of the following:
-• pubkey for a P2PK script
-• pubkeyhash for a P2PKH script
-• scripthash for a P2SH script
-• multisig for a bare multisig script
-• nulldata for nulldata scripts
-• nonstandard for unknown scripts</rdfs:comment>
+        <rdfs:comment xml:lang="en">The type of script. This will be one of the following: pubkey for a P2PK script, pubkeyhash for a P2PKH script, scripthash for a P2SH script, multisig for a bare multisig script, nulldata for nulldata scripts, nonstandard for unknown scripts</rdfs:comment>
         <rdfs:domain rdf:resource="&ccy;scriptSig"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="&ccy;"/>
