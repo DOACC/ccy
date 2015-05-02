@@ -26,7 +26,7 @@
     <owl:Ontology rdf:about="&ccy;">
         <terms:created>2014-05-22</terms:created>
         <rdfs:comment xml:lang="en">Ontology for a cryptocurrency.</rdfs:comment>
-        <rdfs:label>Ontology for a cryptocurrency, based on Melvyn Carvalho’s “Ontology for Crypto Currencies” with a few adjustments and additions.</rdfs:label>
+        <rdfs:label>Ontology for a cryptocurrency, based on Melvin Carvalho’s “Ontology for Crypto Currencies” with a few adjustments and additions.</rdfs:label>
         <ns:term_status>unstable</ns:term_status>
         <foaf:maker rdf:resource="http://bel-epa.com/gjh#gjh"/>
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
@@ -40,6 +40,70 @@
         <rdfs:label xml:lang="en">ElectronicCoin</rdfs:label>
         <skos:prefLabel xml:lang="en">ElectronicCoin</skos:prefLabel>
         <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;Node">
+        <rdfs:comment xml:lang="en">A node of the cryptocurrency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">Node</rdfs:label>
+        <skos:prefLabel xml:lang="en">Node</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;Wallet">
+        <rdfs:comment xml:lang="en">The collective wallet functionality of a node</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">Wallet</rdfs:label>
+        <skos:prefLabel xml:lang="en">Wallet</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;Script">
+        <rdfs:comment xml:lang="en">Bitcoin script</rdfs:comment>
+        <skos:prefLabel xml:lang="en">Script</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;P2PK">
+        <rdfs:comment xml:lang="en">Pay-to-PubKey</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&ccy;Script"/>
+        <skos:prefLabel xml:lang="en">P2PK</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;P2PKH">
+        <rdfs:comment xml:lang="en">Pay-to-PubKey-Hash</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&ccy;Script"/>
+        <skos:prefLabel xml:lang="en">P2PH</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;P2SH">
+        <rdfs:comment xml:lang="en">Pay-to-Script-Hash</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&ccy;Script"/>
+        <skos:prefLabel xml:lang="en">P2SH</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;P2SH">
+        <rdfs:comment xml:lang="en">Pay-to-Script-Hash</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&ccy;Script"/>
+        <skos:prefLabel xml:lang="en">P2SH</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;MultiSig">
+        <rdfs:comment xml:lang="en">Bare multisig script</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&ccy;Script"/>
+        <skos:prefLabel xml:lang="en">MultiSig</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;NullData">
+        <rdfs:comment xml:lang="en">Nulldata script</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&ccy;Script"/>
+        <skos:prefLabel xml:lang="en">NullData</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
     </owl:Class>
 
     <owl:Class rdf:about="&ccy;PublicKeyObject">
@@ -73,6 +137,13 @@
         <rdfs:comment xml:lang="en">Crypographic hash function.</rdfs:comment>
         <rdfs:label>A crypographic hash function</rdfs:label>
         <skos:prefLabel xml:lang="en">HashFunction</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ccy;Address">
+        <rdfs:comment xml:lang="en">A coin address, or simply address, is an identifier of 26-35 alphanumeric characters, beginning with the number 1 or 3, that represents a possible destination for a coin payment. Addresses can be generated at no cost by any user of  the coin.</rdfs:comment>
+        <rdfs:label>A crypographic identifier</rdfs:label>
+        <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
         <rdfs:isDefinedBy rdf:resource="&ccy;"/>
     </owl:Class>
 
@@ -365,6 +436,22 @@
         <rdfs:isDefinedBy rdf:resource="&ccy;"/>
     </owl:DatatypeProperty>
 
+    <owl:DatatypeProperty rdf:about="&ccy;base58addr">
+        <skos:prefLabel xml:lang="en">base58addr</skos:prefLabel>
+        <rdfs:domain rdf:resource="&ccy;Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">If the subject is a list containg a keypair, a hash, and a signature, then the object is either "1" if the signature validates or "0" if it does not.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="&ccy;address">
+        <skos:prefLabel xml:lang="en">address</skos:prefLabel>
+        <rdfs:domain rdf:resource="&ccy;Transaction"/>
+        <rdfs:range rdf:resource="&ccy;Address"/>
+        <rdfs:comment xml:lang="en">.base58 address</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+    </owl:ObjectProperty>
+
     <owl:ObjectProperty rdf:about="&ccy;hasInput">
         <rdfs:comment xml:lang="en">A block transaction has an input.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="&ccy;"/>
@@ -457,6 +544,7 @@
 
     <owl:DatatypeProperty rdf:about="&ccy;txid">
         <rdfs:comment xml:lang="en">The transaction’s TXID encoded as hex in RPC byte order</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Transaction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="&ccy;"/>
         <rdfs:label xml:lang="en">txid</rdfs:label>
@@ -466,6 +554,7 @@
 
     <owl:DatatypeProperty rdf:about="&ccy;version">
         <rdfs:comment xml:lang="en">The transaction format version number</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Transaction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="&ccy;"/>
         <rdfs:label xml:lang="en">version</rdfs:label>
@@ -543,13 +632,23 @@
         <ns:term_status>unstable</ns:term_status>
     </owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="&ccy;asm">
+    <owl:DatatypeProperty rdf:about="&ccy;ssasm">
         <rdfs:domain rdf:resource="&ccy;scriptSig"/>
         <rdfs:comment xml:lang="en">The signature script in decoded form with non-data-pushing op codes listed</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="&ccy;"/>
-        <rdfs:label xml:lang="en">asm</rdfs:label>
-        <skos:prefLabel xml:lang="en">asm</skos:prefLabel>
+        <rdfs:label xml:lang="en">ssasm</rdfs:label>
+        <skos:prefLabel xml:lang="en">ssasm</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;pkasm">
+        <rdfs:domain rdf:resource="&ccy;scriptPubKey"/>
+        <rdfs:comment xml:lang="en">The pubkey script in decoded form with non-data-pushing op codes listed</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">pkasm</rdfs:label>
+        <skos:prefLabel xml:lang="en">pkasm</skos:prefLabel>
         <ns:term_status>unstable</ns:term_status>
     </owl:DatatypeProperty>
 
@@ -563,7 +662,7 @@
         <ns:term_status>unstable</ns:term_status>
     </owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="&ccy;reqsigs">
+    <owl:DatatypeProperty rdf:about="&ccy;reqSigs">
         <rdfs:comment xml:lang="en">The number of signatures required; this is always 1 for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script). It may be greater than 1 for bare multisig. This value will not be returned for nulldata or nonstandard script types</rdfs:comment>
         <rdfs:domain rdf:resource="&ccy;scriptSig"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -955,4 +1054,192 @@
         <skos:prefLabel xml:lang="en">regtest-json-rpc-port</skos:prefLabel>
         <ns:term_status>unstable</ns:term_status>
     </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;locktime">
+        <rdfs:comment xml:lang="en">The lock time ???</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Transaction"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">locktime</rdfs:label>
+        <skos:prefLabel xml:lang="en">locktime</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;txhex">
+        <rdfs:comment xml:lang="en">The transaction hex</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Transaction"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">txhex</rdfs:label>
+        <skos:prefLabel xml:lang="en">txhex</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;txtime">
+        <rdfs:comment xml:lang="en">The transaction timestamp</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Transaction"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">txtime</rdfs:label>
+        <skos:prefLabel xml:lang="en">txtime</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;balance">
+        <rdfs:comment xml:lang="en">Wallet balance</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Wallet"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">balance</rdfs:label>
+        <skos:prefLabel xml:lang="en">balance</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;blocks">
+        <rdfs:comment xml:lang="en">Blockchain height</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">blocks</rdfs:label>
+        <skos:prefLabel xml:lang="en">blocks</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;connections">
+        <rdfs:comment xml:lang="en">Number of connections for the current block</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Node"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">connections</rdfs:label>
+        <skos:prefLabel xml:lang="en">connections</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;difficulty">
+        <rdfs:comment xml:lang="en">The difficulty level of the current block</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Block"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">difficulty</rdfs:label>
+        <skos:prefLabel xml:lang="en">difficulty</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;errors">
+        <rdfs:comment xml:lang="en">Error state indicator</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Node"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">errors</rdfs:label>
+        <skos:prefLabel xml:lang="en">errors</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;keypoololdest">
+        <rdfs:comment xml:lang="en">The keypool oldest entry in the wallet</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Wallet"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">keypoololdest</rdfs:label>
+        <skos:prefLabel xml:lang="en">keypoololdest</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;keypoolsize">
+        <rdfs:comment xml:lang="en">The wallet's keypoolsize</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Wallet"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">keypoolsize</rdfs:label>
+        <skos:prefLabel xml:lang="en">keypoolsize</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;paytxfee">
+        <rdfs:comment xml:lang="en">The paytxfee indicator</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Wallet"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">paytxfee</rdfs:label>
+        <skos:prefLabel xml:lang="en">paytxfee</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;protocolversion">
+        <rdfs:comment xml:lang="en">The protocol version, ???</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">protocolversion</rdfs:label>
+        <skos:prefLabel xml:lang="en">protocolversion</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;proxy">
+        <rdfs:comment xml:lang="en">Proxy status</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Node"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">proxy</rdfs:label>
+        <skos:prefLabel xml:lang="en">proxy</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;testnet">
+        <rdfs:comment xml:lang="en">Testnet status indicator</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">testnet</rdfs:label>
+        <skos:prefLabel xml:lang="en">testnet</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;timeoffset">
+        <rdfs:comment xml:lang="en">The recorded time offset</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Node"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">timeoffset</rdfs:label>
+        <skos:prefLabel xml:lang="en">timeoffset</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;version">
+        <rdfs:comment xml:lang="en">The protocol version</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Node"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+        <skos:prefLabel xml:lang="en">version</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;walletversion">
+        <rdfs:comment xml:lang="en">The wallet version</rdfs:comment>
+        <rdfs:domain rdf:resource="&ccy;Wallet"/>
+        <rdfs:type rdf:resource="&ccy;Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:label xml:lang="en">wallet version</rdfs:label>
+        <skos:prefLabel xml:lang="en">walletversion</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
 </rdf:RDF>
