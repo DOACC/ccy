@@ -483,6 +483,126 @@
     </owl:DatatypeProperty>
     -->
 
+    <owl:DatatypeProperty rdf:about="&ccy;blocktrust">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The blocktrust</rdfs:comment>
+        <rdfs:label xml:lang="en">blocktrust</rdfs:label>
+        <skos:prefLabel xml:lang="en">blocktrust</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;signature">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The signature</rdfs:comment>
+        <rdfs:label xml:lang="en">signature</rdfs:label>
+        <skos:prefLabel xml:lang="en">signature</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;chaintrust">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The chaintrust</rdfs:comment>
+        <rdfs:label xml:lang="en">chaintrust</rdfs:label>
+        <skos:prefLabel xml:lang="en">chaintrust</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;entropybit">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The entropybit</rdfs:comment>
+        <rdfs:label xml:lang="en">entropybit</rdfs:label>
+        <skos:prefLabel xml:lang="en">entropybit</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;flags">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The flags</rdfs:comment>
+        <rdfs:label xml:lang="en">flags</rdfs:label>
+        <skos:prefLabel xml:lang="en">flags</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;mint">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The mint</rdfs:comment>
+        <rdfs:label xml:lang="en">mint</rdfs:label>
+        <skos:prefLabel xml:lang="en">mint</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;modifier">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The modifier</rdfs:comment>
+        <rdfs:label xml:lang="en">modifier</rdfs:label>
+        <skos:prefLabel xml:lang="en">modifier</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;modifierchecksum">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The modifierchecksum</rdfs:comment>
+        <rdfs:label xml:lang="en">modifierchecksum</rdfs:label>
+        <skos:prefLabel xml:lang="en">modifierchecksum</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;proofhash">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The proofhash</rdfs:comment>
+        <rdfs:label xml:lang="en">proofhash</rdfs:label>
+        <skos:prefLabel xml:lang="en">proofhash</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;chainwork">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The chainwork</rdfs:comment>
+        <rdfs:label xml:lang="en">chainwork</rdfs:label>
+        <skos:prefLabel xml:lang="en">chainwork</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;BirthdayA">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The BirthdayA</rdfs:comment>
+        <rdfs:label xml:lang="en">BirthdayA</rdfs:label>
+        <skos:prefLabel xml:lang="en">BirthdayA</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&ccy;BirthdayB">
+        <rdfs:domain rdf:resource="&ccy;BlockChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="&ccy;"/>
+        <rdfs:comment xml:lang="en">The BirthdayB</rdfs:comment>
+        <rdfs:label xml:lang="en">BirthdayB</rdfs:label>
+        <skos:prefLabel xml:lang="en">BirthdayB</skos:prefLabel>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:DatatypeProperty>
+
     <owl:DatatypeProperty rdf:about="&ccy;blockhash">
         <rdfs:comment xml:lang="en">If the transaction has been included in a block on the local best block chain, this is the hash of that block encoded as hex in RPC byte order</rdfs:comment>
         <rdfs:domain rdf:resource="&ccy;scriptSig"/>
