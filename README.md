@@ -1,7 +1,7 @@
 CCY
 ===
 
-An OWL ontology for describing a specific cryptocurrency
+An OWL ontology for a cryptocurrency
 
 The Cryptocurrency (CCY) vocabulary for describing the program variables and economic parameters of a
 bitcoin-protocol altcoin, described using W3C RDF Schema and the Web Ontology Language.
