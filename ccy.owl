@@ -2,7 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -18,7 +18,7 @@
 <rdf:RDF xmlns="http://purl.org/net/bel-epa/ccy#"
      xml:base="http://purl.org/net/bel-epa/ccy"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ccy="http://purl.org/net/bel-epa/ccy#"
@@ -30,7 +30,7 @@
     <owl:Ontology rdf:about="http://purl.org/net/bel-epa/ccy#">
         <ns:term_status>unstable</ns:term_status>
         <dc:description>Ontology for a cryptocurrency, based on Melvin Carvalho’s “Ontology for Crypto Currencies” with a few adjustments and additions.</dc:description>
-        <terms:created>2014-05-22</terms:created>
+        <dct:created>2014-05-22</dct:created>
         <skos:prefLabel xml:lang="en">Ontology for a cryptocurrency.</skos:prefLabel>
         <foaf:maker rdf:resource="http://bel-epa.com/gjh#gjh"/>
         <owl:versionIRI rdf:resource="http://purl.org/net/bel-epa/ccy/1.0"/>
