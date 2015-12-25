@@ -30,6 +30,7 @@
     <owl:Ontology rdf:about="http://purl.org/net/bel-epa/ccy#">
         <ns:term_status>unstable</ns:term_status>
         <dc:description>Ontology for a cryptocurrency, based on Melvin Carvalho’s “Ontology for Crypto Currencies” with a few adjustments and additions.</dc:description>
+        <dc:title>CCY - ontology for cryptocurrency</dc:title>
         <dct:created>2014-05-22</dct:created>
         <skos:prefLabel xml:lang="en">Ontology for a cryptocurrency.</skos:prefLabel>
         <foaf:maker rdf:resource="http://bel-epa.com/gjh#gjh"/>
